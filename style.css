@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    width: 99vw;
+    height: 100vh;
+    /* grid-template-rows: ; */
+    padding: 10px 20px;
+    background-image: url('media/robert-anasch-McX3XuJRsUM-unsplash.jpg');
+}
+
+.sidebar {
+    background-color: rgba(223, 155, 66, 0.432);
+    border-radius: 5px;
+    padding: 20px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: end;
+    margin-top: auto;
+    padding-right: 20px;
+}
+
+.main {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+
+    background-color: rgba(100, 148, 237, 0.253);
+    border-radius: 5px;
+}
+
+.book-list {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+    flex: 0 1 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+    min-width: 310px;
+
+    margin: 1rem .25rem;
+
+    background-color: rgba(219, 204, 199, 0.603);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5px 5px;
+    margin-bottom: 5px;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, .2);
+}
+
+img {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 5px;
+}
+
+.card-info {
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info>p {
+    font-size: 0.8rem;
+    /* margin-bottom: 10px; */
+}
+
+.title {
+    margin-bottom: 5px;
+}
+
+.author {
+    font-size: .8rem;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.card-info>.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.remove-book {
+    /* padding: 5px; */
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+footer.attribuition,
+footer.attribuition * {
+    color: white
+}

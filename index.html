@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./library.js" defer></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button class="new-book" type="submit" form="newbook">NEW BOOK</button>
+
+      <form action="#" class="newbook">
+        <div>
+          <label for="title">*Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="author">*Author</label>
+          <input type="text" id="author" name="author" required />
+        </div>
+        <div>
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" name="pages" />
+        </div>
+        <div>
+          <label for="read">Read</label>
+          <input type="checkbox" id="read" name="read" />
+        </div>
+        <div>
+          <label for="cover-url">Cover URL</label>
+          <input type="text" id="cover-url" name="cover-url" />
+        </div>
+        <div>
+          <label for="attribution">Attribution</label>
+          <input type="text" id="attribution" name="attribution" />
+        </div>
+      </form>
+    </div>
+
+    <h1>Books going to CC0 in 2022</h1>
+
+    <div class="main">
+      <section class="book-list">
+        <!--
+
+        <div class="card" id="book3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/71/Kafka_Das_Schloss_1926.jpg"
+            alt="book cover"
+          />
+          <div class="card-info">
+            <p>
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Kafka_Das_Schloss_1926.jpg"
+                >© Foto H.-P.Haack</a
+              >, Public domain, via Wikimedia Commons
+            </p>
+
+            <h2 class="title">The Castle</h2>
+
+            <h5 class="author">Frank Kafka</h5>
+            <div class="footer">
+              <p class="pages">Pages</p>
+              <p class="read">
+                Read<input type="checkbox" id="read" name="read" />
+              </p>
+              <button class="remove-book book3">
+                <img src="./media/round-delete-button-svgrepo-com.svg"  width=40px  alt="remove button">
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </div>
+
+    <footer class="attribuition">
+      Photo by
+      <a
+        href="https://unsplash.com/@diesektion?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        >Robert Anasch</a
+      >
+      on
+      <a
+        href="https://unsplash.com/s/photos/book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        >Unsplash</a
+      >
+    </footer>
+  </body>
+</html>
