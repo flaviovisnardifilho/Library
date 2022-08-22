@@ -29,16 +29,17 @@ function addBookToLibrary() {
     document.querySelector('#author'),
     document.querySelector('#pages'),
     document.querySelector('#read'),
-    myLibrary.length,
     document.querySelector('#cover-url'),
     document.querySelector('#attribuition')
-  );
+    );
 
   myLibrary.push(newBook);
+  displayBooks();
 }
 
 function displayBooks() {
   // loops through the array and display on their onw card
+  bookList.replaceChildren()
   myLibrary.map((book) => {
     const cardBook = document.createElement('div');
     cardBook.classList.add('card');
@@ -105,23 +106,17 @@ function displayBooks() {
     cardInfo.appendChild(footer);
     cardBook.appendChild(cardInfo);
 
-    // console.log({ cardBook });
     bookList.appendChild(cardBook);
-
-    
-    // <a href="https://commons.wikimedia.org/wiki/File:Agatha_Christie_by_Nathaniel_Hughes_John_Baird.png" >Nathaniel Hughes John Baird</a>, Public domain, via Wikimedia Commons
     
   });
 }
 
 function removeBookFromLibrary(e) {
-  // console.log({ e });
   const card = e.currentTarget.parentElement.parentElement.parentElement;
   console.log(card.id.slice(4))
   console.log(myLibrary.splice(card.id.slice(4), 1))
   console.log(myLibrary)
   displayBooks()
-  // displaybooks
 }
 
 function readBook() {}
@@ -172,6 +167,7 @@ function initialBooks() {
   myLibrary.push(theSunAlsoRises);
   myLibrary.push(theMurderOfRogerAckroyd);
   myLibrary.push(theCastle);
+  displayBooks();
 }
 
 const newBookButton = document.querySelector('.new-book');
@@ -190,6 +186,4 @@ const bookList = document.querySelector('.book-list');
 const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
 
 initialBooks();
-// console.log({ myLibrary });
-displayBooks();
-// console.log('display');
+
