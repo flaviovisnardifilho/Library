@@ -1,24 +1,22 @@
 let myLibrary = [];
 
-function Book(
-  title,
-  author,
-  pages,
-  read,
-  coverUrl,
-  attribuition,
-  bookNumber = myLibrary.length
-) {
-  this.title = title;
-  this.pages = pages;
-  this.author = author;
-  this.read = read;
-
-  this.coverUrl = coverUrl;
-  this.attribuition = attribuition;
-  this.bookNumber = bookNumber;
-
-  this.info = function () {
+class Book {
+  constructor(title,
+    author,
+    pages,
+    read,
+    coverUrl,
+    attribuition,
+    bookNumber = myLibrary.length) {
+    this.title = title;
+    this.pages = pages;
+    this.author = author;
+    this.read = read;
+    this.coverUrl = coverUrl;
+    this.attribuition = attribuition;
+    this.bookNumber = bookNumber;
+  }
+  info() {
     return `${title} by ${author}, ${pages} pages, ${read}`;
   };
 }
